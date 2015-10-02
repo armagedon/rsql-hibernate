@@ -274,7 +274,7 @@ public abstract class AbstractCriterionBuilder {
         for (String name : names) {
             if (name.equals(property)) return true;
         }
-        return false;
+        return classMetadata.getIdentifierPropertyName().equals(property);
     }
     
     /**

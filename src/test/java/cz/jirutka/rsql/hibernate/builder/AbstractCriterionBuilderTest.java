@@ -103,6 +103,7 @@ public abstract class AbstractCriterionBuilderTest {
         SessionFactory sf = SessionFactoryInitializer.getSessionFactory();
         ClassMetadata classMetadata = sf.getClassMetadata(Course.class);
         
+        assertTrue(instance.isPropertyName("id", classMetadata));
         assertTrue(instance.isPropertyName("code", classMetadata));
         assertTrue(instance.isPropertyName("department", classMetadata));
         assertFalse(instance.isPropertyName("foo", classMetadata));
